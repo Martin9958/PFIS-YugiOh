@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 6be286f618e8cc6fc38bf6b68afde0fa2f0ce347b0bd1fddf4c9d057bf8941e3
+-- hash: 22591877dbc497c3ce66c73f4e6183bfa5478d09ffc6b0f97bd177384ce93c23
 
 name:           my-project
 version:        0.0.0
@@ -26,9 +26,10 @@ library
       Foundation
       Handler.Comment
       Handler.Common
-      Handler.Demo
       Handler.Home
+      Handler.Mazo
       Handler.Profile
+      Handler.Carta
       Import
       Import.NoFoundation
       Model
@@ -59,7 +60,7 @@ library
     , monad-control >=0.3 && <1.1
     , monad-logger >=0.3 && <0.4
     , persistent >=2.8 && <2.9
-    , persistent-sqlite >=2.8 && <2.9
+    , persistent-postgresql >=2.8 && <2.9
     , persistent-template >=2.5 && <2.9
     , safe
     , shakespeare >=2.0 && <2.1
@@ -115,7 +116,7 @@ executable my-project
     , monad-logger >=0.3 && <0.4
     , my-project
     , persistent >=2.8 && <2.9
-    , persistent-sqlite >=2.8 && <2.9
+    , persistent-postgresql >=2.8 && <2.9
     , persistent-template >=2.5 && <2.9
     , safe
     , shakespeare >=2.0 && <2.1
@@ -170,12 +171,11 @@ test-suite my-project-test
     , hspec >=2.0.0
     , http-client-tls >=0.3 && <0.4
     , http-conduit >=2.3 && <2.4
-    , microlens
     , monad-control >=0.3 && <1.1
     , monad-logger >=0.3 && <0.4
     , my-project
     , persistent >=2.8 && <2.9
-    , persistent-sqlite >=2.8 && <2.9
+    , persistent-postgresql >=2.8 && <2.9
     , persistent-template >=2.5 && <2.9
     , safe
     , shakespeare >=2.0 && <2.1

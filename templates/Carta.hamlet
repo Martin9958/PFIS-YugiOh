@@ -1,0 +1,4 @@
+<form method=post action=@{actionR} encType=#{encoding}>
+      <h1> Adiciona una carta Nueva a tu mazo
+      ^{widget}
+      <button href=@{CartaNewR} .btn .btn-default> Agregar

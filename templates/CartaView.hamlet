@@ -1,0 +1,52 @@
+<div>
+
+<h1> Cartas en Inventario
+$if null cartas
+    <p> No hay cartas ingresadas
+$else
+    <table .table .table-responsive .table-hover>
+        <thead>
+                     <th> Nombre
+                     <th> Tipo de carta
+                     <th> Atributo
+                     <th> Nivel
+                     <th> Descripcion
+                     <th> Ataque
+                     <th> Defensa
+                     <th> Icono
+                     <th>
+
+
+        $forall Entity cartaId carta <- cartas
+
+            <tbody>
+                <tr>
+                    <td>
+                        #{cartaNombrecarta carta}
+
+                    <td>
+                        #{cartaTipo carta}
+
+                    <td>
+                        #{cartaAtributo carta}
+
+                    <td>
+                        #{cartaNivel carta}
+
+                    <td>
+                        #{cartaDescripcion carta}
+
+                    <td>
+                        #{cartaAtaque carta}
+
+                    <td>
+                        #{cartaDefensa carta}
+
+                    <td>
+                        #{cartaIcono carta}
+
+                    <td>
+                          <form action="@{CartaDeleteR cartaId}" method="post">
+                                                     <input type="submit" name="upvote" value="Borrar Carta" />
+
+    

@@ -13,4 +13,15 @@
 
 /profile ProfileR GET
 
-/demoNew DemoNewR GET POST
+/mazoNew MazoNewR GET POST
+
+/mazolist MazoListR GET
+
+/mazolist/#MazoId MazoDeleteR POST
+
+/cartaNew CartaNewR GET POST
+
+/cartaslist CartaListR GET
+
+/cartaslist/#CartaId CartaDeleteR POST
+

@@ -166,6 +166,13 @@ instance Yesod App where
     isAuthorized FaviconR _ = return Authorized
     isAuthorized RobotsR _ = return Authorized
     isAuthorized (StaticR _) _ = return Authorized
+    isAuthorized MazoNewR _ = return Authorized
+    isAuthorized MazoListR _ = return Authorized
+    isAuthorized (MazoDeleteR _) _ = return Authorized
+    isAuthorized CartaNewR _ = return Authorized
+    isAuthorized CartaListR _ = return Authorized
+    isAuthorized (CartaDeleteR _) _ = return Authorized
+
 
     -- the profile route requires that the user is authenticated, so we
     -- delegate to that function
