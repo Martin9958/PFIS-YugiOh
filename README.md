@@ -1,12 +1,15 @@
 ## Database Setup
 
-After installing Postgres, run:
-
-```
-createuser my-project --password my-project --superuser
-createdb my-project
-createdb my-project_test
-```
+1. Crear usuario rootyugi (definido en el archivo de configuracion settings.yml)
+CREATE USER rootyugi WITH PASSWORD 'rootyugi';
+2. Crear base de datos rootyugi (definido en settings.yml)
+CREATE DATABASE rootyugi;
+3. Crear base de datos de tests (definido en test-settings.yml)
+CREATE DATABASE rootyugi_test;
+4. Brindar permisos al usuario rootyugi en la base de datos.
+GRANT ALL PRIVILEGES ON DATABASE rootyugi TO rootyugi;
+5. Brindar permisos al usuario rootlol en la base de datos de tests.
+GRANT ALL PRIVILEGES ON DATABASE rootyugi_test TO rootyugi;
 
 ## Haskell Setup
 
