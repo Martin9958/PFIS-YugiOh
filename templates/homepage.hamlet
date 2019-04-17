@@ -15,10 +15,10 @@
             <form action="/mazolist">
                 <input type="submit" value="Listado de Mazos" .btn .btn-danger />
         <div .row>
-            <form action="/cardNew">
+            <form action="/cartaNew">
                 <input type="submit" value="Agregar Carta Al inventario" .btn .btn-danger />
 
         <div .row>
-            <form action="/cardlist">
+            <form action="/cartaslist">
                 <input type="submit" value="Listado de Cartas" .btn .btn-danger />
 
